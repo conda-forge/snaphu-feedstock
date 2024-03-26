@@ -1,5 +1,5 @@
 {% set name = "snaphu" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5cdd1f1708179a2d04f82214a43ff54ebc96442c4628a90901419db4e023cbcd
+  sha256: 00117fbf5fd364dec173d3825232e0554237713486f20fb44178bff844d4c404
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
