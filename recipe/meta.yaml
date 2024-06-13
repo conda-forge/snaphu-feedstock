@@ -1,5 +1,5 @@
 {% set name = "snaphu" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 00117fbf5fd364dec173d3825232e0554237713486f20fb44178bff844d4c404
+  sha256: 1855ceb406071c8f14ab37493c7a956a17bbaf0b7bc2f78f1f1e0254e5ea4823
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -21,6 +21,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cmake >=3.15
     - make
   host:
