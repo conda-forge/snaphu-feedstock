@@ -1,0 +1,19 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 643744d..c1aeeab 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -55,13 +55,7 @@ module = "test.*"
+ disable_error_code = ["misc", "no-untyped-def"]
+ 
+ [tool.pytest.ini_options]
+-addopts = [
+-  "-ra",
+-  "--showlocals",
+-  "--strict-markers",
+-  "--strict-config",
+-  "--cov=snaphu",
+-]
++addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+ xfail_strict = true
+ filterwarnings = ["error"]
+ log_cli_level = "INFO"
